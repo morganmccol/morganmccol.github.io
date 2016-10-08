@@ -1,0 +1,159 @@
+.light-btn {
+    background: transparent;
+    font-weight: 600;
+    padding: 0.7em 2em;
+    color: $white;
+    margin-right: 10px;
+    border: 2px solid $white;
+    display: block;
+    float: left;
+
+    &:hover {
+        background: $white;
+        color: $shark;
+        border-color: $white;
+    }
+}
+
+.action-btn {
+    background: $caribbean-green;
+    font-weight: 600;
+    padding: 0.7em 2em;
+    color: $white;
+    border: 2px solid $caribbean-green;
+    display: block;
+    float: left;
+
+    &:hover {
+        background: $white;
+        color: $shark;
+        border-color: $white;
+    }
+}
+
+.global-overlay {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    height: 100%;
+    overflow: visible;
+    width: 100%;
+    opacity: 0;
+}
+
+.overlay {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: -50%;
+    background: rgba($ebony-clay, 0.8);
+    width: 100%;
+    height: 100%;
+    @include bezier-transition(all, 0.5s, cubic-bezier(0.7, 0, 0.3, 1));
+    border-right: 1px solid darken($ebony-clay, 5%);
+
+    &.skew-part {
+        @include skew(-25, 0);
+    }
+}
+
+#stars {
+    width: 1px;
+    height: 1px;
+    margin-left: 25%;
+    background: transparent;
+    box-shadow: $shadows-small;
+    @include animation(animStar 50s infinite linear);
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: $shadows-small;
+    }
+}
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    margin-left: 25%;
+    background: transparent;
+    box-shadow: $shadows-medium;
+    @include animation(animStar 100s infinite linear);
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: $shadows-medium;
+    }
+}
+
+#stars3 {
+    width: 3px;
+    height: 3px;
+    margin-left: 25%;
+    background: transparent;
+    box-shadow: $shadows-big;
+    @include animation(animStar 150s infinite linear);
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        box-shadow: $shadows-big;
+    }
+}
+
+@include keyframes(animStar) {
+    from {
+        @include transform(translateY(0px));
+    }
+
+    to {
+        @include transform(translateY(-2000px));
+    }
+}
+
+
+.brand-logo {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    max-width: 200px;
+}
+
+#left-side {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    @include bezier-transition(all, $medium-transition, cubic-bezier(0, 0, 0.58, 1));
+
+    .content {
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        padding: 0;
+        top: 50vh;
+        width: 100%;
+        padding: 0 10%;
+        @include bezier-transition(all, $medium-transition, cubic-bezier(0, 0, 0.58, 1));
+        @include transform(translateY(-50%));
+        text-align: left;
+        @include font-smoothing;
+        opacity: 1;
+        visibility: visible;
+    }
+}

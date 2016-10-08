@@ -1,0 +1,64 @@
+/* Extra Small Devices, Phones */
+@include phone {
+    #left-side {
+        padding: 50px 0 100px;
+
+        .content {
+            padding: 0 3%;
+        }
+
+        &.minimal-phone {
+            height: 100vh;
+        }
+    }
+
+    h1.text-intro {
+        font-size: 30px;
+    }
+
+    h2.text-intro {
+        font-size: 18px;
+    }
+
+    .light-btn {
+        max-width: 80%;
+        min-width: 70%;
+    }
+
+    .action-btn {
+        max-width: 80%;
+        min-width: 70%;
+    }
+
+    .dialog__content {
+        width: 95%;
+        max-width: 95%;
+        min-width: 75%;
+    }
+
+    .dialog {
+        .close-newsletter {
+            top: 2px;
+            right: 5px;
+        }
+
+        .dialog-inner {
+            padding: 40px 20px 50px;
+
+            h4 {
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    #subscribe {
+        .block-message {
+            padding: 5px 2px;
+        }
+
+        p.notify-valid {
+            font-size: 12px;
+        }
+    }
+}

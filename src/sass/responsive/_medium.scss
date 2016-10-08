@@ -1,0 +1,91 @@
+/* Medium Devices, Desktops */
+@include medium {
+    .overlay {
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &.skew-part {
+            @include skew(0, 0);
+        }
+    }
+
+    #container {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
+
+    #stars, #stars2, #stars3 {
+        margin-left: 0 !important;
+    }
+
+    .brand-logo {
+        position: relative;
+        left: 50%;
+        @include transform(translateX(-50%));
+        margin: 25px 0;
+    }
+
+    .light-btn {
+        padding: 0.7em 0;
+        margin-right: 0;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        max-width: 50%;
+    }
+
+    .action-btn {
+        padding: 0.7em 0;
+        float: none;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+
+    #left-side {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 100px 0 150px;
+
+        .content {
+            position: relative;
+            left: 50%;
+            @include transform(translateX(-50%));
+            top: auto;
+            text-align: center;
+        }
+    }
+
+    .social-icons {
+        left: 0;
+        bottom: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    #right-side {
+        position: relative;
+        @include transform-phly(0, 0, 0);
+        top: 0;
+        width: 100%;
+
+        &.hide-right {
+            @include transform-phly(0, 0, 0);
+        }
+    }
+
+    #close-more-info {
+        display: none;
+    }
+
+    .mCSB_scrollTools {
+        right: 0;
+    }
+
+    .mCSB_scrollTools-left {
+        right: 0 !important;
+    }
+}

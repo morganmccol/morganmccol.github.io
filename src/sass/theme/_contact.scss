@@ -1,0 +1,109 @@
+.info-contact {
+    margin-bottom: 30px;
+
+    .item-map {
+        padding: 0;
+
+        &:first-child {
+            padding-left: 15px;
+        }
+
+        &:last-child {
+            padding-right: 15px;
+        }
+
+        .contact-item {
+            padding: 15px 0;
+            font-size: 14px;
+            text-align: center;
+
+            i {
+                color: $caribbean-green;
+                font-size: 2em;
+            }
+
+            a {
+                font-weight: 600;
+                color: $raven;
+
+                &:hover {
+                    color: $caribbean-green;
+                }
+            }
+        }
+    }
+}
+
+#contact-form {
+    margin-top: 40px;
+
+    .form-control {
+        background: $white;
+        border: 1px solid rgba($black, 0.1);
+        @include border-radius(0);
+        box-shadow: none;
+        font-weight: 400;
+        outline: medium none;
+        height: 40px;
+        width: 100%;
+        color: $black;
+        @include bezier-transition(all, 0.3s, cubic-bezier(0, 0, 0.58, 1));
+        text-align: left;
+
+        &:hover, &:focus {
+            box-shadow: none;
+        }
+
+        @include placeholder {
+            color: $dove-gray !important;
+        }
+    }
+
+    textarea.form-control {
+        min-height: 150px;
+    }
+
+    button#valid-form {
+        font-weight: 400;
+        padding: 1em 2em;
+        font-size: 1em;
+        display: block;
+        margin: 0 auto 0;
+        background: $caribbean-green;
+        color: $white;
+        @include border-radius(0);
+        font-weight: 700;
+        width: 100%;
+        line-height: 10px;
+
+        &:hover {
+            background: darken($caribbean-green, 5%);
+            color: $white;
+        }
+    }
+}
+
+#block-answer {
+    min-height: 60px;
+    margin-top: 1em;
+    text-align: center;
+    color: $raven;
+}
+
+.success-message, .error-message {
+    color: $raven;
+
+    p {
+        color: $raven !important;
+    }
+
+    .ion-checkmark-round {
+        color: $green-alert;
+    }
+}
+
+.error-message {
+    .ion-close-round {
+        color: $torch-red;
+    }
+}

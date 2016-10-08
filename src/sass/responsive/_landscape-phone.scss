@@ -1,0 +1,64 @@
+/* Only for phone in landscape mode */
+@include landscape-phone {
+    #left-side {
+        padding: 50px 0 100px;
+    }
+
+    h1.text-intro {
+        font-size: 30px;
+    }
+
+    h2.text-intro {
+        font-size: 18px;
+    }
+
+    .dialog__content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 75%;
+    }
+
+    .dialog {
+        .close-newsletter {
+            top: 2px;
+            right: 5px;
+        }
+
+        .dialog-inner {
+            padding: 40px 20px 50px;
+
+            h4 {
+                font-size: 25px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    #subscribe {
+        #notifyMe {
+            margin-top: 10px;
+
+            .form-group {
+                .form-control {
+                    width: 70%;
+                    margin: 0;
+                    float: left;
+                }
+
+                button.submit {
+                    width: 30%;
+                    margin: 0;
+                    float: left;
+                }
+            }
+        }
+
+        .block-message {
+            padding: 5px 2px;
+        }
+
+        p.notify-valid {
+            font-size: 12px;
+        }
+    }
+}
