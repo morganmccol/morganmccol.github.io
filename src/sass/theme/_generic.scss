@@ -1,5 +1,6 @@
 body {
-    background: $ebony-clay;
+    background: url('../../../dist/img/stl.jpg');
+    background-size: cover;
     font-family: $font-family;
     color: $white;
     @include font-smoothing(on);
