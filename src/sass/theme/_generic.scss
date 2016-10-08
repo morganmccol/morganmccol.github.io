@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 40px;
     font-family: $second-font;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 h2 {
@@ -129,6 +129,10 @@ sup {
     font-size: 0.8em;
     position: relative;
     top: -0.5em;
+}
+
+.highlight {
+    color: $caribbean-green;
 }
 
 .clear {

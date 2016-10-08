@@ -124,13 +124,14 @@
     }
 }
 
-
+/*
 .brand-logo {
     position: absolute;
     left: 10%;
     top: 5%;
     max-width: 200px;
 }
+*/
 
 #left-side {
     position: fixed;
@@ -155,5 +156,10 @@
         @include font-smoothing;
         opacity: 1;
         visibility: visible;
+    }
+
+    .title {
+        text-transform: uppercase;
+        letter-spacing: 10px;
     }
 }
