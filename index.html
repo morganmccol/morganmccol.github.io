@@ -1,132 +1,365 @@
-<!DOCTYPE html>
-<html lang="en-us" class="no-js">
-
-<head>
-    <meta charset="utf-8">
-    <title>Morgan McCollum - Front End Web Development in Cincinnati, Ohio</title>
-    <meta name="description" content="Morgan McCollum is a Front End Web Developer in Cincinnati, Ohio. Proficient in HTML5, CSS3, JavaScript, PHP, and WordPress. Interested in web application development.">
-    <meta name="keywords" content="HTML, CSS, JavaScript, HTML5, CSS3, JS, jQuery, PHP, WordPress, Front End Development, Web Development, Web Design, Development, Front End, Cincinnati, Ohio, OH" />
-    <meta name="author" content="Morgan McCollum" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="dist/img/favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144">
-    <link rel="apple-touch-icon" sizes="114x114" href="dist/img/favicon-retina-iphone.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="dist/img/favicon-standard-ipad.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="dist/img/favicon-standard-iphone.png">
-
-    <!-- Facebook -->
-    <meta property="og:title" content="Morgan McCollum - Front End Web Developer">
-    <meta property="og:description" content="Front End Web Developer in Cincinnati, Ohio. Proficient in HTML5, CSS3, JavaScript, PHP, and WordPress.">
-    <meta property="og:image" content="dist/img/social.png">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@morganmccol">
-    <meta name="twitter:creator" content="@morganmccol">
-    <meta name="twitter:url" content="http://morganmccol.com">
-    <meta name="twitter:title" content="Morgan McCollum - Front End Web Developer">
-    <meta name="twitter:description" content="Front End Web Developer in Cincinnati, Ohio. Proficient in HTML5, CSS3, JavaScript, PHP, and WordPress.">
-    <meta name="twitter:image" content="dist/img/social.png">
-
-    <!-- Analyticss -->
+<html>
+  <head>
+    <title>Morgan McCollum</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACTUExURUxpcWAfFF4dFGkrIGAgFWQoHWksImIjGFEWDlcUC14fFWEgFs21hWQlGWAfFV8dFH9SSmsxKnE2KVURC31FNbqysWAfFaqZl7+acfDfpP/A6Neenl4cE2IiGMCfdYpUPo9rZnEzMt/DkLqUbKiIZP/5uX5GMr+6upl6dsnLy9DW16BxU49bVUsFAP/P5+PLquzfpF6Uz9MAAAAcdFJOUwDVw/3yHAMBE/x4Zf7khqj9UXcw5v45+wT8/v7/vDF0AAAACXBIWXMAABYlAAAWJQFJUiTwAAAArUlEQVQY00WP6RKCMAyEQwvFcgvimXAjt/r+T2dBwP2V/WZnsgsAIMDWGNNsdSxSHpGUVmKCoROXUiIdFyLAk06RlgOX3gxMuLL0VtWOMzzdg7ICDFnVZe0URaJvIL2/q+T1oA3omCfJZ0TcAckpLacVmHBwiY9BnuXcF8qqSBS0Xd/1bfbroSKnrInj5hKEO+Bzc3qG2xrDRU1DtDYPwiPfJ3b+z42YZTFrfgFfaCQNu/Slr4gAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII=" type="image/x-icon">
+    <style>
+      html,
+      body,
+      .wrap {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        overflow: hidden;
+        background: #283149;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      }
+      .wrap {
+        position: relative;
+      }
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        max-width: 1056px;
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%);
+      }
+      a {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        color: #ddd;
+        transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+      a,
+      a:hover,
+      a:focus {
+        outline: none;
+        text-decoration: none;
+      }
+      a:before {
+        content: '';
+        z-index: -1;
+        display: block;
+        position: absolute;
+        bottom: 15%;
+        left: -28px;
+        right: 100%;
+        height: 10px;
+        transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+      a:hover,
+      a:focus {
+        color: #DA0463;
+      }
+      a:hover:before,
+      a:focus:before {
+        left: -2px;
+        right: -2px;
+        background-color: rgba(218,4,99,0.2);
+      }
+      .links {
+        position: absolute;
+        top: 35px;
+        left: 28px;
+        font-size: 14px;
+        line-height: 28px;
+      }
+      .links div {
+        opacity: 0;
+        -webkit-transform: translateY(-28px) rotate(-5deg);
+                transform: translateY(-28px) rotate(-5deg);
+      }
+      .links div:nth-last-child(1) {
+        -webkit-animation: get1 0.8348s cubic-bezier(0.19, 1, 0.22, 1) 1.5348s forwards;
+                animation: get1 0.8348s cubic-bezier(0.19, 1, 0.22, 1) 1.5348s forwards;
+      }
+      @-webkit-keyframes get1 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @keyframes get1 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      .links div:nth-last-child(2) {
+        -webkit-animation: get2 0.875168s cubic-bezier(0.19, 1, 0.22, 1) 1.575168s forwards;
+                animation: get2 0.875168s cubic-bezier(0.19, 1, 0.22, 1) 1.575168s forwards;
+      }
+      @-webkit-keyframes get2 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @keyframes get2 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      .links div:nth-last-child(3) {
+        -webkit-animation: get3 0.92199488s cubic-bezier(0.19, 1, 0.22, 1) 1.62199488s forwards;
+                animation: get3 0.92199488s cubic-bezier(0.19, 1, 0.22, 1) 1.62199488s forwards;
+      }
+      @-webkit-keyframes get3 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @keyframes get3 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      .links div:nth-last-child(4) {
+        -webkit-animation: get4 0.9763140608s cubic-bezier(0.19, 1, 0.22, 1) 1.6763140608s forwards;
+                animation: get4 0.9763140608s cubic-bezier(0.19, 1, 0.22, 1) 1.6763140608s forwards;
+      }
+      @-webkit-keyframes get4 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @keyframes get4 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      .links div:nth-last-child(5) {
+        -webkit-animation: get5 1.039324310528s cubic-bezier(0.19, 1, 0.22, 1) 1.739324310528s forwards;
+                animation: get5 1.039324310528s cubic-bezier(0.19, 1, 0.22, 1) 1.739324310528s forwards;
+      }
+      @-webkit-keyframes get5 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @keyframes get5 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      .links div:nth-last-child(6) {
+        -webkit-animation: get6 1.11241620021248s cubic-bezier(0.19, 1, 0.22, 1) 1.81241620021248s forwards;
+                animation: get6 1.11241620021248s cubic-bezier(0.19, 1, 0.22, 1) 1.81241620021248s forwards;
+      }
+      @-webkit-keyframes get6 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @keyframes get6 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      .words {
+        position: absolute;
+        bottom: 63px;
+        left: 28px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 63px;
+        color: #DBEDF3;
+      }
+      .words div {
+        -webkit-transform: translateY(63px) rotate(5deg);
+                transform: translateY(63px) rotate(5deg);
+        opacity: 0;
+      }
+      .words div:nth-child(1) {
+        -webkit-animation: get1 0.8348s cubic-bezier(0.19, 1, 0.22, 1) 1.5348s forwards;
+                animation: get1 0.8348s cubic-bezier(0.19, 1, 0.22, 1) 1.5348s forwards;
+      }
+      @-webkit-keyframes get1 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @keyframes get1 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      .words div:nth-child(2) {
+        -webkit-animation: get2 0.875168s cubic-bezier(0.19, 1, 0.22, 1) 1.575168s forwards;
+                animation: get2 0.875168s cubic-bezier(0.19, 1, 0.22, 1) 1.575168s forwards;
+      }
+      @-webkit-keyframes get2 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @keyframes get2 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      .words div span {
+        position: relative;
+        color: #DA0463;
+      }
+      .words div span:before {
+        content: '';
+        z-index: -1;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        height: 31.5px;
+        background-color: rgba(218,4,99,0.2);
+        -webkit-animation: years 1.6s cubic-bezier(0.19, 1, 0.22, 1) 1.9s forwards;
+                animation: years 1.6s cubic-bezier(0.19, 1, 0.22, 1) 1.9s forwards;
+      }
+      @-webkit-keyframes years {
+        100% {
+          right: 0;
+        }
+      }
+      @keyframes years {
+        100% {
+          right: 0;
+        }
+      }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58356020-1"></script>
     <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-58356020-1', 'auto');
-        ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-58356020-1');
     </script>
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="dist/css/style.min.css" />
-
-    <!-- Modernizr -->
-    <script src="dist/js/modernizr.custom.js"></script>
-</head>
-
-<body>
-
-    <!-- Preloader -->
-    <div id="loading">
-        <div id="preloader">
-            <span></span>
-            <span></span>
+  </head>
+  <body>
+    <div class="wrap">
+      <canvas id="dots"></canvas>
+      <div class="container">
+        <div class="links">
+          <div><a href="mailto:morgan.mccol@gmail.com" title="morgan.mccol@gmail.com">morgan.mccol@gmail.com</a></div>
+          <div><a href="https://morganmccol.com/resume.pdf" title="Resume">Resume</a></div>
+          <div><a href="https://linkedin.com/in/morganmccol" title="LinkedIn (@morganmccol)">LinkedIn</a></div>
+          <div><a href="https://twitter.com/morganmccol" title="Twitter (@morganmccol)">Twitter</a></div>
+          <div><a href="https://github.com/morganmccol" title="GitHub (@morganmccol)">Github</a></div>
+          <div><a href="https://wakatime.com/@morganmccol" title="WakaTime (@morganmccol)">WakaTime</a></div>
         </div>
+        <div class="words">
+          <div>A <span>front-end developer</span> that enjoys design.</div>
+          <div>Currently helping to create user interfaces at <span>GE Digital</span>.</div>
+        </div>
+      </div>
     </div>
-
-    <!-- Overlay and Star effect -->
-    <div class="global-overlay">
-        <div class="overlay skew-part">
-            <div id='stars'></div>
-            <div id='stars2'></div>
-            <div id='stars3'></div>
-        </div>
-    </div>
-
-    <!-- Home/Left -->
-    <section id="left-side">
-        <!-- <img src="dist/img/logo.png" alt="" class="brand-logo" /> -->
-        <div class="content">
-            <h1 class="text-intro title opacity-0">Morgan McCollum</h1>
-            <h3 class="text-intro title opacity-0 highlight">Web Developer</h3>
-            <h2 class="text-intro opacity-0">Located in Cincinnati, Ohio. Proficient in HTML5, CSS3, JavaScript, PHP, and WordPress. Interested in web application development.</h2>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="http://goo.gl/a7EFXL" target="_blank" data-dialog="somedialog" class="action-btn trigger text-intro opacity-0">View Resume</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-        <!-- Social icons -->
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/morganmccol" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/morganmccol" target="_blank"><i class="fa fa-github-alt"></i></a>
-            <a href="https://wakatime.com/@morganmccol" target="_blank"><i class="fa fa-clock-o"></i></a>
-            <a href="https://twitter.com/morganmccol" target="_blank"><i class="fa fa-twitter"></i></a>
-        </div>
-    </section>
-
-    <!-- JS Libraries -->
-    <script src="dist/js/jquery.min.js"></script>
-    <script src="dist/js/jquery.easings.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-
-    <!-- Main JS Files -->
-    <script src="dist/js/scripts.min.js"></script>
-    <script src="dist/js/main.min.js"></script>
-
-    <!-- <script>
-        $(window).load(function () {
-            $(function ($) {
-                $('body').vidbg({
-                    'mp4': 'dist/media/terminal.mp4',
-                    'poster': 'dist/img/social.png',
-                }, {
-
-                    // Options
-                    muted: true,
-                    loop: true,
-                    overlay: true,
-                    overlayColor: '#000',
-                    overlayAlpha: '0.1',
-                });
-            });
+    <script>
+      window.onload = function () {
+        var canvas = document.getElementById('dots');
+        var ctx = canvas.getContext('2d');
+        var color = 'rgba(255, 255, 255, .5)';
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        
+        canvas.width = width;
+        canvas.height = height;
+        ctx.fillStyle = color;
+        
+        var dots = {
+          num: 100,
+          distance: 200,
+          d_radius: 200,
+          velocity: -.9,
+          array: []
+        };
+        
+        function Dot () {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.vx = dots.velocity + Math.random();
+          this.vy = dots.velocity + Math.random();
+          this.radius = Math.random() * 2;
+        }
+        
+        Dot.prototype = {
+          create: function() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            ctx.fill();
+          },
+          animate: function() {
+            for (var i = 0; i < dots.num; i++) {
+              var dot = dots.array[i];
+              if (dot.x < 0 || dot.x > width) {
+                dot.vx = - dot.vx;
+                dot.vy = dot.vy;
+              } else if (dot.y < 0 || dot.y > height) {
+                dot.vx = dot.vx;
+                dot.vy = - dot.vy;
+              }
+              dot.x += dot.vx;
+              dot.y += dot.vy;
+            }
+          }
+        };
+        
+        function createDots() {
+          ctx.clearRect(0, 0, width, height);
+          for (var i = 0; i < dots.num; i++) {
+            dots.array.push(new Dot());
+            dot = dots.array[i];
+            dot.create();
+          }
+          dot.animate();
+        }
+        
+        setInterval(createDots, 1000 / 30);
+        
+        document.addEventListener('resize', function() {
+          canvas.width = width;
+          canvas.height = height;
         });
-    </script> -->
-
-</body>
-
+      };
+    </script>
+  </body>
 </html>
