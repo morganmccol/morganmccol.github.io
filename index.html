@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Morgan McCollum</title>
+    <title>Morgan McCollum · morganmccol</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACTUExURUxpcWAfFF4dFGkrIGAgFWQoHWksImIjGFEWDlcUC14fFWEgFs21hWQlGWAfFV8dFH9SSmsxKnE2KVURC31FNbqysWAfFaqZl7+acfDfpP/A6Neenl4cE2IiGMCfdYpUPo9rZnEzMt/DkLqUbKiIZP/5uX5GMr+6upl6dsnLy9DW16BxU49bVUsFAP/P5+PLquzfpF6Uz9MAAAAcdFJOUwDVw/3yHAMBE/x4Zf7khqj9UXcw5v45+wT8/v7/vDF0AAAACXBIWXMAABYlAAAWJQFJUiTwAAAArUlEQVQY00WP6RKCMAyEQwvFcgvimXAjt/r+T2dBwP2V/WZnsgsAIMDWGNNsdSxSHpGUVmKCoROXUiIdFyLAk06RlgOX3gxMuLL0VtWOMzzdg7ICDFnVZe0URaJvIL2/q+T1oA3omCfJZ0TcAckpLacVmHBwiY9BnuXcF8qqSBS0Xd/1bfbroSKnrInj5hKEO+Bzc3qG2xrDRU1DtDYPwiPfJ3b+z42YZTFrfgFfaCQNu/Slr4gAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII=" type="image/x-icon">
@@ -66,7 +66,7 @@
       a:focus:before {
         left: -2px;
         right: -2px;
-        background-color: rgba(218,4,99,0.2);
+        background-color: rgba(218, 4, 99, 0.2);
       }
       .links {
         position: absolute;
@@ -201,8 +201,8 @@
       @media only screen and (max-width: 600px) {
         .words {
           bottom: 17px;
-          font-size: 28px;
-          line-height: 43px;
+          font-size: 23px;
+          line-height: 38px;
         }
       }
       .words div {
@@ -246,6 +246,24 @@
                   transform: translateY(0);
         }
       }
+      .words div:nth-child(3) {
+        -webkit-animation: get3 0.915536s cubic-bezier(0.19, 1, 0.22, 1) 1.615536s forwards;
+                animation: get3 0.915536s cubic-bezier(0.19, 1, 0.22, 1) 1.615536s forwards;
+      }
+      @-webkit-keyframes get3 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @keyframes get3 {
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
       .words div span {
         position: relative;
         color: #DA0463;
@@ -259,7 +277,7 @@
         left: 0;
         right: 100%;
         height: 31.5px;
-        background-color: rgba(218,4,99,0.2);
+        background-color: rgba(218, 4, 99, 0.2);
         -webkit-animation: years 1.6s cubic-bezier(0.19, 1, 0.22, 1) 1.9s forwards;
                 animation: years 1.6s cubic-bezier(0.19, 1, 0.22, 1) 1.9s forwards;
       }
@@ -277,7 +295,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58356020-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
       gtag('config', 'UA-58356020-1');
     </script>
@@ -289,14 +307,15 @@
         <div class="links">
           <div><a href="mailto:morgan.mccol@gmail.com" title="morgan.mccol@gmail.com">morgan.mccol@gmail.com</a></div>
           <div><a href="/resume.pdf" title="Resume">Resume</a></div>
-          <div><a href="https://linkedin.com/in/morganmccol" title="LinkedIn (@morganmccol)">LinkedIn</a></div>
-          <div><a href="https://twitter.com/morganmccol" title="Twitter (@morganmccol)">Twitter</a></div>
-          <div><a href="https://github.com/morganmccol" title="GitHub (@morganmccol)">Github</a></div>
+          <div><a href="https://linkedin.com/in/morganmccol" title="LinkedIn (morganmccol)">LinkedIn</a></div>
+          <div><a href="https://twitter.com/morganmccol" title="Twitter (morganmccol)">Twitter</a></div>
+          <div><a href="https://github.com/morganmccol" title="GitHub (morganmccol)">GitHub</a></div>
           <div><a href="https://wakatime.com/@morganmccol" title="WakaTime (@morganmccol)">WakaTime</a></div>
         </div>
         <div class="words">
-          <div>A <span>front-end developer</span> that enjoys design.</div>
-          <div>Currently creating user interfaces at <span>GE Digital</span>.</div>
+          <div>Hi, I'm <span>Morgan</span>. 🎉</div>
+          <div>I've worked as a software engineer, ux designer, and <span>product engineering manager</span>.</div>
+          <div>I'm currently building intuitive medical technology at <span>Genetesis</span>.</div>
         </div>
       </div>
     </div>
@@ -304,7 +323,7 @@
       window.onload = function () {
         var canvas = document.getElementById('dots');
         var ctx = canvas.getContext('2d');
-        var color = 'rgba(255, 255, 255, .5)';
+        var color = 'rgba(255, 255, 255, 0.5)';
         var width = window.innerWidth;
         var height = window.innerHeight;
         
