@@ -6,7 +6,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * @author Lea Verou
  */
 
-pre {
+ pre {
   padding: calc(var(--space) / 2);
   font-size: .85em;
   background-color: var(--bg-code);
@@ -17,9 +17,7 @@ pre {
 
 code {
   background-color: var(--bg-code);
-  border: 1px solid var(--border-color);
   font-size: .85em;
-  padding: .2em .5em;
 }
 
 code[class*="language-"],
