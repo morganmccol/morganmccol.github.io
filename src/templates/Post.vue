@@ -6,7 +6,6 @@
       </h1>
 
       <PostMeta :post="$page.post" />
-
     </div>
 
     <div class="post content-box">
@@ -80,7 +79,6 @@ query Post ($id: ID!) {
 }
 
 .post {
-
   &__header {
     width: calc(100% + var(--space) * 2);
     margin-left: calc(var(--space) * -1);
