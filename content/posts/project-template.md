@@ -1,8 +1,8 @@
 ---
 title: Project Name
-date: 2022-01-01
+date: 2016-01-01
 published: true
-tags: ["template"]
+tags: ['template']
 series: false
 cover_image: ./images/template.png
 canonical_url: false

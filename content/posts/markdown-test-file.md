@@ -1,8 +1,8 @@
 ---
 title: Markdown Test File
-date: 2022-01-02
+date: 2016-01-01
 published: true
-tags: ['markdown','template']
+tags: ['markdown', 'template']
 canonical_url: false
 description: "Markdown is intended to be as easy-to-read and easy-to-write as is feasible. Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it's been marked up with tags or formatting instructions."
 ---
@@ -241,7 +241,7 @@ Regular Markdown syntax is not processed within code blocks. E.g.,
 asterisks are just literal asterisks within a code block. This means
 it's also easy to use Markdown to write about Markdown's own syntax.
 
-```markdown
+```
   tell application "Foo"
     beep
   end tell
