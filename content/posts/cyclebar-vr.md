@@ -1,6 +1,6 @@
 ---
 title: CycleBar VR
-date: 2018-01-01
+date: 2016-08-26
 published: true
 tags: ['cyclebar', 'design']
 series: false
