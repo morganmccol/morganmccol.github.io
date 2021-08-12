@@ -11,11 +11,11 @@
     </p>
 
     <p class="author__links">
-      <a href="//">Resume</a>
-      <a href="//">LinkedIn</a>
-      <a href="//">Twitter</a>
-      <a href="//">GitHub</a>
-      <a href="//">Wakatime</a>
+      <a href="//"><g-image alt="LinkedIn" class="author__social" src="~/assets/images/social/linkedin.svg" width="24" height="24" /></a>
+      <a href="//"><g-image alt="Instagram" class="author__social" src="~/assets/images/social/instagram.svg" width="24" height="24" /></a>
+      <a href="//"><g-image alt="Twitter" class="author__social" src="~/assets/images/social/twitter.svg" width="24" height="24" /></a>
+      <a href="//"><g-image alt="GitHub" class="author__social" src="~/assets/images/social/github.svg" width="24" height="24" /></a>
+      <a href="//"><g-image alt="GitHub" class="author__social" src="~/assets/images/social/wakatime.svg" width="24" height="24" /></a>
     </p>
   </div>
 </template>
@@ -57,8 +57,6 @@ export default {
   }
 
   &__links {
-    margin-top: -.5em;
-
     a {
       margin: 0 .5em;
     }
