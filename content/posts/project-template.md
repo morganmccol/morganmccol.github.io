@@ -1,7 +1,7 @@
 ---
 title: Project Name
 date: 2016-01-01
-published: true
+published: false
 tags: ['template']
 series: false
 cover_image: ./images/template.png
