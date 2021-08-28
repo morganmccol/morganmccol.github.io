@@ -1,5 +1,5 @@
 ---
-title: Project Name
+title: Project Template
 date: 2016-01-01
 published: false
 tags: ['template']

@@ -9,8 +9,6 @@ canonical_url: false
 description: ""
 ---
 
-**User Personas** are used to identify users for each application.
-
 ## Template
 
 ![Image](./images/personas-00.png)
