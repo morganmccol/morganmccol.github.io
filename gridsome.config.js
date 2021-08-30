@@ -9,6 +9,11 @@ module.exports = {
   siteDescription: `I'm a software engineer, ux designer, and product engineering manager.`,
   siteUrl: 'https://morganmccol.com',
 
+  icon: {
+    favicon: './src/favicon.png',
+    touchicon: './src/touchicon.png'
+  },
+
   templates: {
     Post: '/:title',
     Tag: '/tag/:id'
