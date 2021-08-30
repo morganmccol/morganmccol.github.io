@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: `Hi, I'm Morgan. 🎉`,
+  siteName: `morganmccol`,
   siteDescription: `I'm a software engineer, ux designer, and product engineering manager.`,
   siteUrl: 'https://morganmccol.com',
 
@@ -33,7 +33,7 @@ module.exports = {
   ],
 
   transformers: {
-    //Add markdown support to all file-system sources
+    // Add markdown support to all file-system sources
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],

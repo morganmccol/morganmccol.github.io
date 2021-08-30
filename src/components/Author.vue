@@ -3,7 +3,7 @@
     <g-image alt="Author image" class="author__image" src="~/assets/icon.svg" width="180" height="180" blur="5" />
 
     <h1 v-if="showTitle" class="author__site-title">
-      {{ $static.metadata.siteName }}
+      Hi, I'm Morgan. 🎉
     </h1>
 
     <p class="author__intro">

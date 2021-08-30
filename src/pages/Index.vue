@@ -41,7 +41,7 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: `Hi, I'm Morgan. 🎉`
   }
 }
 </script>
