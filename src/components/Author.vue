@@ -1,6 +1,6 @@
 <template>
   <div class="author">
-    <g-image alt="Author image" class="author__image" src="~/assets/images/icon.svg" width="180" height="180" blur="5" />
+    <g-image alt="Author image" class="author__image" src="~/assets/icon.svg" width="180" height="180" blur="5" />
 
     <h1 v-if="showTitle" class="author__site-title">
       {{ $static.metadata.siteName }}
@@ -12,16 +12,16 @@
 
     <p class="author__links">
       <a href="https://linkedin.com/in/morganmccol" target="_blank" rel="noopener noreferrer">
-        <g-image alt="LinkedIn" class="author__social" src="~/assets/images/social/linkedin.svg" width="24" height="24" />
+        <g-image alt="LinkedIn" class="author__social" src="~/assets/social/linkedin.svg" width="24" height="24" />
       </a>
       <a href="https://twitter.com/morganmccol" target="_blank" rel="noopener noreferrer">
-        <g-image alt="Twitter" class="author__social" src="~/assets/images/social/twitter.svg" width="24" height="24" />
+        <g-image alt="Twitter" class="author__social" src="~/assets/social/twitter.svg" width="24" height="24" />
       </a>
       <a href="https://github.com/morganmccol" target="_blank" rel="noopener noreferrer">
-        <g-image alt="GitHub" class="author__social" src="~/assets/images/social/github.svg" width="24" height="24" />
+        <g-image alt="GitHub" class="author__social" src="~/assets/social/github.svg" width="24" height="24" />
       </a>
       <a href="https://drive.google.com/file/d/0B0DjQ1rFeHN5YXpIVUFISGJtTnc" target="_blank" rel="noopener noreferrer">
-        <g-image alt="Resume" class="author__social" src="~/assets/images/social/paper.svg" width="24" height="24" />
+        <g-image alt="Resume" class="author__social" src="~/assets/social/paper.svg" width="24" height="24" />
       </a>
     </p>
   </div>
