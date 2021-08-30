@@ -11,11 +11,18 @@
     </p>
 
     <p class="author__links">
-      <a href="//"><g-image alt="LinkedIn" class="author__social" src="~/assets/images/social/linkedin.svg" width="24" height="24" /></a>
-      <a href="//"><g-image alt="Instagram" class="author__social" src="~/assets/images/social/instagram.svg" width="24" height="24" /></a>
-      <a href="//"><g-image alt="Twitter" class="author__social" src="~/assets/images/social/twitter.svg" width="24" height="24" /></a>
-      <a href="//"><g-image alt="GitHub" class="author__social" src="~/assets/images/social/github.svg" width="24" height="24" /></a>
-      <a href="//"><g-image alt="GitHub" class="author__social" src="~/assets/images/social/wakatime.svg" width="24" height="24" /></a>
+      <a href="https://linkedin.com/in/morganmccol" target="_blank" rel="noopener noreferrer">
+        <g-image alt="LinkedIn" class="author__social" src="~/assets/images/social/linkedin.svg" width="24" height="24" />
+      </a>
+      <a href="https://twitter.com/morganmccol" target="_blank" rel="noopener noreferrer">
+        <g-image alt="Twitter" class="author__social" src="~/assets/images/social/twitter.svg" width="24" height="24" />
+      </a>
+      <a href="https://github.com/morganmccol" target="_blank" rel="noopener noreferrer">
+        <g-image alt="GitHub" class="author__social" src="~/assets/images/social/github.svg" width="24" height="24" />
+      </a>
+      <a href="https://drive.google.com/file/d/0B0DjQ1rFeHN5YXpIVUFISGJtTnc" target="_blank" rel="noopener noreferrer">
+        <g-image alt="Resume" class="author__social" src="~/assets/images/social/paper.svg" width="24" height="24" />
+      </a>
     </p>
   </div>
 </template>
