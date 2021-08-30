@@ -1,28 +1,28 @@
 ---
-title: Using Sketch with Git
-date: 2020-06-16
+title: Sketch to GitHub
+date: 2020-06-17
 published: true
-tags: ['sketch', 'software', 'tutorial']
+tags: ['tutorial', 'software', 'sketch']
 series: false
 cover_image: ./images/sketch.png
 canonical_url: false
 description: ""
 ---
 
-**Using Sketch with Git** was developed to track changes, handle merge conflicts, and prevent file overrides when sharing Sketch files between multiple people.
+**Sketch to GitHub** was a project I created to apply version control to individual Sketch files. This allowed us to handle merge conflicts and prevent file overrides when sharing files between multiple people.
 
-This was accomplished through two scripts: one for downloading and another for uploading Sketch files within a single GitHub repository.
+Version control was added through the use of two custom Bash scripts: one for downloading files from a GitHub repository and another for uploading files to the same repository.
 
-**Downloading Sketch Files from GitHub**
+## Downloading Sketch Files
 
-This script used a `/sketch` folder inside the repository to build and store Sketch files after download. It would run automatically using Git Hooks for `post-merge` and `post-pull`.
+This script used a `/sketch` folder inside the repository to rebuild and store updated Sketch files after download. It ran automatically using Git Hooks for `post-merge` and `post-pull`.
 
 The following workflow was performed:
 
-1. Remove all existing `.sketch` files
-1. Export each Sketch directory to a `.zip` file
-1. Copy `.zip` file to `.sketch` file
-1. Remove `.zip` files
+1. Remove all existing `.sketch` files from folder
+1. Export each Sketch directory from repository to its own `.zip` file
+1. Convert `.zip` file to `.sketch` file
+1. Remove leftover `.zip` files
 
 ```bash
 #!/bin/sh
@@ -30,39 +30,40 @@ The following workflow was performed:
 directory="sketch"
 cd $directory/
 
-echo "removing sketch files ..."
+echo "removing previous sketch files ..."
 rm -rf -- *.sketch
 
-echo "rebuilding sketch files ..."
+echo "exporting new sketch files ..."
 for file in *
 do
   zip_file="${file%.*}"
 
-  # export sketch directory to .zip
+  # export sketch directory to zip file
   cd $zip_file/
   zip $zip_file.zip -r .
 
-  # copy .zip to .sketch
+  # convert zip file to sketch file
   cp $zip_file.zip ../$zip_file.sketch
 
   # remove files no longer needed
   rm -rf $zip_file.zip
   cd ..
 done
+
 echo "done!"
 ```
 
-**Uploading Sketch Files to GitHub**
+## Uploading Sketch Files
 
-This script used a `/sketch` folder inside git repository to build and store Sketch files after download. It would run automatically on unstaged files using a Git Hook for `pre-commit`.
+This script used a `/sketch` folder inside the repository to prepare Sketch files for version control prior to upload. It would run automatically on unstaged files using a Git Hook for `pre-commit`.
 
 The following workflow was performed:
 
-1. Removes modified Sketch directories
-1. Copies `.sketch` file to `.zip` file
-1. Exports `.zip` file to Sketch directory
-1. Removes `.zip` file, preview images, and preview text
-1. Prettifies `.json` files in each directory
+1. Check for modified `.sketch` files and remove their associated Sketch directory
+1. Convert modified `.sketch` file to `.zip` file
+1. Export `.zip` file to Sketch directory
+1. Remove leftover `.zip` files, images previews, and text previews
+1. Prettify `.json` files for better version control
 
 ```bash
 #!/bin/sh
@@ -70,18 +71,18 @@ The following workflow was performed:
 directory="sketch"
 cd $directory/
 
-echo "checking for modified files ..."
+echo "checking for modified sketch files ..."
 for modified_sketch_file in *.sketch
 do
   sketch_file=$(basename $modified_sketch_file .sketch)
 
-  # remove existing file directory
+  # remove associated file directories
   rm -rf -- $sketch_file/
 
-  # copy .sketch to .zip
+  # convert sketch file to .zip file
   cp $sketch_file.sketch $sketch_file.zip
 
-  # unzip file to directory
+  # export zip file to Sketch directory
   unzip -o $sketch_file.zip -d $sketch_file/
 
   # remove files no longer needed
@@ -90,7 +91,7 @@ do
   rm -rf $sketch_file/text-previews/
 done
 
-echo "cleaning json files ..."
+echo "cleaning up json files ..."
 for modified_json_file in /*.json
 do
   json_file=${modified_json_file/sketch/.}
@@ -99,5 +100,6 @@ do
   python3 -m json.tool --sort-keys "$json_file" "$json_file".pretty
   mv "$json_file".pretty "$json_file"
 done
+
 echo "done!"
 ```
