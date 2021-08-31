@@ -19,7 +19,7 @@ The application would first check for the most common (and solvable) errors. The
 
 The second set of checks included services running on external hardware connected to the device. Failure of any of these would often result in the need for a restart of the connected component or reaching out to customer service for additional troubleshooting.
 
-The final set checked the CardioFlux device itself for internal issues. Any error occurring at this stage would result in the device needing to be manually inspection prior to use.
+The final set checked the CardioFlux device itself for internal issues. Any error occurring at this stage would result in the device needing to be manually inspected prior to use.
 
 ## Template
 

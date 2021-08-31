@@ -18,7 +18,7 @@ A Sketch library was created to document flows for each CardioFlux application. 
 * Image of screen displayed during user flow
 * Action of user (often clicking on a specific element to progress)
 * End goal of the user
-* Questions in the form of conditional checks (ie. does the user have an account? is the user logged in?)
+* Questions in the form of conditional checks (for example, does the user have an account? is the user logged in?)
 * Response from conditional check
 * Explanation for user failure to reach goal
 
