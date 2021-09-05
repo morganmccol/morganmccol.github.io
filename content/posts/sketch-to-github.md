@@ -1,6 +1,6 @@
 ---
 title: Sketch to GitHub
-date: 2020-06-17
+date: 2020-06-16
 published: true
 tags: ['tutorial', 'software', 'sketch']
 series: false

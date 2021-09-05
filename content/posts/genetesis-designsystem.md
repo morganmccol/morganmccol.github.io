@@ -1,6 +1,6 @@
 ---
 title: CardioFlux Design System
-date: 2020-06-16
+date: 2020-06-17
 published: true
 tags: ['genetesis', 'ux', 'sketch']
 series: false
